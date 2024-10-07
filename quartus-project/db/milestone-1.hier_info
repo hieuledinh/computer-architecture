@@ -1,0 +1,24 @@
+|vending_machine
+i_clk => o_change[0]~reg0.CLK
+i_clk => o_change[1]~reg0.CLK
+i_clk => o_change[2]~reg0.CLK
+i_clk => o_soda~reg0.CLK
+i_clk => state~4.DATAIN
+i_nickle => next_state~2.OUTPUTSELECT
+i_nickle => next_state~3.OUTPUTSELECT
+i_nickle => next_state~4.OUTPUTSELECT
+i_nickle => Selector1.IN3
+i_nickle => Selector2.IN4
+i_nickle => Selector3.IN4
+i_nickle => Selector4.IN3
+i_dime => next_state~0.OUTPUTSELECT
+i_dime => next_state~1.OUTPUTSELECT
+i_dime => next_state~3.DATAA
+i_quarter => next_state~1.DATAA
+i_quarter => next_state~0.DATAA
+o_soda <= o_soda~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_change[0] <= o_change[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_change[1] <= o_change[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_change[2] <= o_change[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
